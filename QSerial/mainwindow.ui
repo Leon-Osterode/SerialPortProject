@@ -7,20 +7,34 @@
     <x>0</x>
     <y>0</y>
     <width>453</width>
-    <height>373</height>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>Einstellungen</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
+       <item row="4" column="0">
+        <widget class="QPushButton" name="btn_closePort">
+         <property name="text">
+          <string>Port Schließen</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btn_openPort">
+         <property name="text">
+          <string>Port öffnen</string>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
@@ -60,54 +74,153 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="btn_openPort">
-         <property name="text">
-          <string>Port öffnen</string>
+       <item row="3" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Kommunikation</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0" colspan="3">
+            <widget class="QPlainTextEdit" name="plainTextEdit">
+             <property name="font">
+              <font>
+               <family>Courier New</family>
+               <pointsize>10</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="ln_text"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="btn_send">
+             <property name="text">
+              <string>Senden</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="btn_clearLog">
+             <property name="text">
+              <string>Log löschen</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Datei</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="btn_searchFile">
+               <property name="text">
+                <string>Suchen</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="ln_filePath"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_UploafFile">
+               <property name="text">
+                <string>Hochladen</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>Row Timer</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sp_row_timer">
+                 <property name="maximum">
+                  <number>100000</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>10</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>ms</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Char Timer</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sp_char_timer">
+                 <property name="maximum">
+                  <number>100000</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>10</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>ms</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QGroupBox" name="groupBox_2">
-      <property name="title">
-       <string>Kommunikation</string>
+    <item>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="text">
+       <string>Programmende</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="ln_text"/>
-       </item>
-       <item row="2" column="0" colspan="3">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>Programmende</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QPushButton" name="btn_send">
-         <property name="text">
-          <string>Senden</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="btn_clearLog">
-         <property name="text">
-          <string>Log löschen</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0" colspan="3">
-        <widget class="QPlainTextEdit" name="plainTextEdit">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
    </layout>
@@ -121,8 +234,62 @@
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuEinstellungen">
+    <property name="title">
+     <string>Einstellungen</string>
+    </property>
+    <widget class="QMenu" name="menuPort">
+     <property name="title">
+      <string>Port</string>
+     </property>
+     <addaction name="actionPort_w_hlen"/>
+    </widget>
+    <widget class="QMenu" name="menuBaudrate">
+     <property name="title">
+      <string>Baudrate</string>
+     </property>
+     <addaction name="actionBaudrate_w_hlen"/>
+    </widget>
+    <addaction name="menuPort"/>
+    <addaction name="menuBaudrate"/>
+    <addaction name="separator"/>
+    <addaction name="actionHex"/>
+   </widget>
+   <widget class="QMenu" name="menuStart">
+    <property name="title">
+     <string>Start</string>
+    </property>
+   </widget>
+   <addaction name="menuStart"/>
+   <addaction name="menuEinstellungen"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPort_w_hlen">
+   <property name="text">
+    <string>Port wählen</string>
+   </property>
+  </action>
+  <action name="actionBaudrate_w_hlen">
+   <property name="text">
+    <string>Baudrate wählen</string>
+   </property>
+  </action>
+  <action name="actionHex">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hexdump anzeigen</string>
+   </property>
+   <property name="toolTip">
+    <string>Hexdump anzeigen</string>
+   </property>
+  </action>
+  <action name="actionChar_Timer">
+   <property name="text">
+    <string>Char Timer</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>
@@ -133,8 +300,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>195</x>
-     <y>320</y>
+     <x>212</x>
+     <y>363</y>
     </hint>
     <hint type="destinationlabel">
      <x>205</x>
@@ -143,4 +310,7 @@
    </hints>
   </connection>
  </connections>
+ <slots>
+  <slot>updateLamps()</slot>
+ </slots>
 </ui>
